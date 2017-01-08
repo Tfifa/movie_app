@@ -1,0 +1,10 @@
+<view class="page">
+
+
+
+  <view class="weui-footer weui-footer_fixed-bottom">
+    <view class="weui-footer__text">极客学院</view>
+  </view>
+
+
+</view>
