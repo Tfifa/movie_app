@@ -1,17 +1,50 @@
 {
-  "pages":[
-    
-    "pages/hot/hot",
+  "pages": [
     "pages/index/index",
+    "pages/hot/hot",
     "pages/order/order",
     "pages/user/user",
     "pages/detail/detail"
-    
   ],
-  "window":{
-    "backgroundTextStyle":"light",
+  "window": {
+    "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#fff",
     "navigationBarTitleText": "极客影评",
-    "navigationBarTextStyle":"black"
+    "navigationBarTextStyle": "black"
+  },
+
+  "tabBar":{
+    "color":"#272636",
+    "selectedColor":"#B8860B",
+    "backgroundColor":"#fff",
+    "borderStyle":"black",
+     "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "最新",
+        "iconPath": "image/ico/home.png",
+        "selectedIconPath": "image/ico/home.png"
+      },
+      {
+        "pagePath": "pages/hot/hot",
+        "text": "热门",
+        "iconPath": "image/ico/hot.png",
+        "selectedIconPath": "image/ico/hot.png"
+      },
+      {
+        "pagePath": "pages/order/order",
+        "text": "订单",
+        "iconPath": "image/ico/order.png",
+        "selectedIconPath": "image/ico/order.png"
+      },
+      {
+        "pagePath": "pages/user/user",
+        "text": "个人",
+        "iconPath": "image/ico/user.png",
+        "selectedIconPath": "image/ico/user.png"
+      }]
+
   }
+
+  
 }
