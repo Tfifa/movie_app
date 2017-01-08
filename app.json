@@ -1,13 +1,17 @@
 {
   "pages":[
-    "pages/test/test",
+    
+    "pages/hot/hot",
     "pages/index/index",
-    "pages/logs/logs"
+    "pages/order/order",
+    "pages/user/user",
+    "pages/detail/detail"
+    
   ],
   "window":{
     "backgroundTextStyle":"light",
     "navigationBarBackgroundColor": "#fff",
-    "navigationBarTitleText": "WeChat",
+    "navigationBarTitleText": "极客影评",
     "navigationBarTextStyle":"black"
   }
 }
