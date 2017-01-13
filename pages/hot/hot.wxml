@@ -1,10 +1,40 @@
 <!--index.wxml-->
-<view class="container">
-  <view  bindtap="bindViewTap" class="userinfo">
-    <image class="userinfo-avatar" src="{{userInfo.avatarUrl}}" background-size="cover"></image>
-    <text class="userinfo-nickname">{{userInfo.nickName}}</text>
-  </view>
-  <view class="usermotto">
-    <text class="user-motto">{{motto}} hot</text>
-  </view>
+<view class="page">
+  <swiper indicator-dots="{{indicatorDots}}"
+  autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
+  <block wx:for="{{imgUrls}}">
+    <swiper-item>
+      <image src="{{item}}" class="slide-image" />
+    </swiper-item>
+  </block>
+</swiper>
+
+
+
+   <view class="movie_list">
+     
+        <view class="movie">
+          <view class="left">
+            <image src="{{item.img}}"></image>
+          </view>
+
+          <view class="center">
+            <text class="title"> 名称 : </text>
+            <text class="detail">观看人数:</text>
+            <text class="detail">评分:</text>
+            <text class="detail">上映时间:</text>
+            <text class="detail">2014-09-09:12:12:00</text>
+          </view>
+
+          <view class="right">
+            <text style="font-size:18px;color:red;padding-top:10rpx">购票                </text>
+          </view>
+
+          
+        </view>
+    
+    </view>
+
+
 </view>
+

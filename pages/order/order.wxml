@@ -1,10 +1,39 @@
-<!--index.wxml-->
-<view class="container">
-  <view  bindtap="bindViewTap" class="userinfo">
-    <image class="userinfo-avatar" src="{{userInfo.avatarUrl}}" background-size="cover"></image>
-    <text class="userinfo-nickname">{{userInfo.nickName}}</text>
-  </view>
-  <view class="usermotto">
-    <text class="user-motto">{{motto}} order</text>
-  </view>
+<view class="page">
+  <scroll-view scroll-y="true" style="height:100vh;" bindscrolltolower="load" bindscrolltoupper="refesh">
+
+
+    <view class="page__hd">
+      <swiper indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
+        <block wx:for="{{imgUrls}}">
+          <swiper-item>
+            <image src="{{item}}" class="slide-image"/>
+          </swiper-item>
+        </block>
+      </swiper>
+    </view>
+
+    
+    <view class="movie_list">
+      <block wx:for="{{list}}">
+        <view class="movie">
+          <view class="left">
+            <image class="left" src="{{item.img}}"></image>
+          </view>
+          <view class="center">
+            <text class="title"> 名称 : {{item.title}}</text>
+            <text class="detail">观看人数:{{item.watch_count}}</text>
+            <text class="detail">评分:{{item.score}}.8</text>
+            <text class="detail">上映时间:</text>
+            <text class="detail">{{item.show_time}}</text>
+          </view>
+          <view class="right">
+            <text style="font-size:18px;color:red;padding-top:10rpx">购票</text>
+          </view>
+        </view>
+      </block>
+    </view>
+  </scroll-view>
+  <loading hidden="{{hidden}}">
+    拼命加载中...
+  </loading>
 </view>

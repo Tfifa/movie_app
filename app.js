@@ -25,6 +25,7 @@ App({
     }
   },
   globalData:{
-    userInfo:null
+    userInfo:null,
+    backend_url : "http://16web.tunnel.qydev.com"
   }
 })
