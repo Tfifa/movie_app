@@ -9,22 +9,20 @@ Page({
     list: [],
     hidden: false,
     imgUrls: [],
-
-
+    page: 0,
+    size: 5,
     indicatorDots: true,
     autoplay: true,
     interval: 2000,
     duration: 1000
   },
-
+  //页面加载的时候自动调用
   onLoad: function () {
     console.log('onLoad')
-    this.getMovieList(0, 5);
+    this.getMovieList();
   },
 
-  /**
-   * 网络请求数据
-   */
+  //网络请求数据
   getMovieList: function () {
 
     var that = this
@@ -37,19 +35,24 @@ Page({
       },
       success: function (res) {
         let resp = res.data.data;
-        // console.log(resp)
-
+        //获取响应结果
         var result = res.data.data.data;
-        var arr = [];
+        //声明电影数组列表
+        var movie_list = [];
         var imgs = [];
 
+        if (resp.currentPage >= resp.totalPages) {
+          console.info("无更多电影了");
+          return;
+        }
 
         //合并之前的数据
-     
+        Array.prototype.push.apply(movie_list, that.data.list)
         for (var i = 0; i < result.length; i++) {
           imgs.push(result[i].img);
 
-          arr.push({
+          //获取页面需要看到电影对象
+          movie_list.push({
             movie_id: result[i].id, img: result[i].img,
             title: result[i].title, summary: result[i].summary,
             show_time: util.formatTime(new Date(result[i].show_time)),
@@ -58,15 +61,27 @@ Page({
           })
         }
 
-
+        //把处理的数据仓库
         that.setData({
-          list: arr,
+          list: movie_list,
           hidden: true,
           imgUrls: imgs,
+          page: res.data.data.currentPage
         })
+
       }
     })
+  },
 
+  //加载更多
+  load: function (e) {
+    this.getMovieList();
+    console.log("loadMore");
+
+  },
+  //刷新处理
+  refesh: function (e) {
+    console.log("refesh");
   }
 
 })

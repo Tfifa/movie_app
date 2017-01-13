@@ -1,5 +1,5 @@
 <view class="page">
-  <scroll-view scroll-y="true" style="height:100vh;" bindscrolltolower="load" bindscrolltoupper="refesh">
+  <scroll-view scroll-y="true" style="height:100vh;" bindscrolltoupper="refresh" bindscrolltolower="load">
 
 
     <view class="page__hd">
@@ -23,8 +23,8 @@
             <text class="title"> 名称 : {{item.title}}</text>
             <text class="detail">观看人数:{{item.watch_count}}</text>
             <text class="detail">评分:{{item.score}}.8</text>
-            <text class="detail">上映时间:</text>
-            <text class="detail">{{item.show_time}}</text>
+            <text class="detail">上映时间:</text>
+            <text class="detail">{{item.show_time}}</text>
           </view>
           <view class="right">
             <text style="font-size:18px;color:red;padding-top:10rpx">购票</text>
