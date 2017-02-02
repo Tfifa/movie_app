@@ -26,6 +26,6 @@ App({
   },
   globalData:{
     userInfo:null,
-    backend_url : "http://16web.tunnel.qydev.com"
+    backend_url : "http://127.0.0.1:8360"
   }
 })

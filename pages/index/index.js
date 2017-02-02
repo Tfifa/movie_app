@@ -6,6 +6,10 @@ var app = getApp()
 Page({
 
   data: {
+
+     inputShowed: false,
+      inputVal: "",
+
     list: [],
     hidden: false,
     imgUrls: [],
@@ -79,7 +83,7 @@ Page({
   },
   refresh:function(){
     console.info("refresh more")
-  }
+  },
 
 
 
@@ -87,5 +91,13 @@ Page({
 
 
 
+
+ showInput: function () {
+    console.info(1111)
+    wx.navigateTo({
+  url: '../search/search'
+})
+
+    }
 
 })

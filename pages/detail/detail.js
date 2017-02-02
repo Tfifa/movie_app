@@ -12,8 +12,10 @@ Page({
       url: '../logs/logs'
     })
   },
-  onLoad: function () {
+  onLoad: function (e) {
     console.log('onLoad')
+    console.info(e)
+
     var that = this
     //调用应用实例的方法获取全局数据
     app.getUserInfo(function(userInfo){
