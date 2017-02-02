@@ -4,6 +4,7 @@
     "pages/hot/hot",
     "pages/order/order",
     "pages/user/user",
+    
     "pages/detail/detail",
     "pages/search/search"
   ],
