@@ -1,12 +1,23 @@
 {
   "pages": [
+
+    "pages/comment/comment",
+
     "pages/index/index",
-    "pages/hot/hot",
-    "pages/order/order",
-    "pages/user/user",
-    
+
+
+
+
+
+"pages/order/order",
+
     "pages/detail/detail",
+    "pages/hot/hot",
+    
+    "pages/user/user",
     "pages/search/search"
+
+    
   ],
   "window": {
     "backgroundTextStyle": "light",

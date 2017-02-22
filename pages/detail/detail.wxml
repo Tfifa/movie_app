@@ -1,10 +1,28 @@
+
 <!--index.wxml-->
-<view class="container">
-  <view  bindtap="bindViewTap" class="userinfo">
-    <image class="userinfo-avatar" src="{{userInfo.avatarUrl}}" background-size="cover"></image>
-    <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+<view class="page">
+
+  <view class="movie debug">
+        <view class="left debug">
+        <image src="http://img02.tooopen.com/images/20150928/tooopen_sy_143912755726.jpg" class="img"></image>
+        </view>
+        <view class="right debug">
+        content
+        </view>
   </view>
-  <view class="usermotto">
-    <text class="user-motto">{{motto}} detail</text>
+
+
+  <view class="list debug">
+    <view class="comment debug">
+      xxx
+    </view>
+    <view class="comment debug">
+      xxx
+    </view>
+    <view class="comment debug">
+      xxx
+    </view>
   </view>
+
+
 </view>

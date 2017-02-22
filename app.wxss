@@ -14,3 +14,17 @@
 
 
 
+.debug {
+  border: 1rpx solid #F00;
+  margin: 5rpx;
+}
+
+
+/**描述**/
+.detail{
+  font-size:14px;color:gray
+}
+/**标题**/
+.title{
+  font-size:16px;color:#052b51
+}

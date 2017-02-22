@@ -1,39 +1,52 @@
+
+<!--index.wxml-->
 <view class="page">
-  <scroll-view scroll-y="true" style="height:100vh;" bindscrolltolower="load" bindscrolltoupper="refesh">
+  <view class="movie_list">
 
+    <view class="movie">
+      <view class="left debug">
+        <image src="http://img02.tooopen.com/images/20150928/tooopen_sy_143912755726.jpg" class="img"></image>
+      </view>
+      <view class="center debug">
+      
+      <view class="first">
+      <text class="title">海贼王</text>
+      <icon type="success_circle" size="25" color="red"/>
+      
+      </view>
+      <text class="detail">¥:9.8元</text>
+      <text class="detail">创建时间:</text>
+      <text class="detail">2017-01-01 12:21:59</text>
 
-    <view class="page__hd">
-      <swiper indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
-        <block wx:for="{{imgUrls}}">
-          <swiper-item>
-            <image src="{{item}}" class="slide-image"/>
-          </swiper-item>
-        </block>
-      </swiper>
+      </view>
+      <view class="right debug">
+        <button type="primary" size="mini">评价</button>
+      </view>
     </view>
 
-    
-    <view class="movie_list">
-      <block wx:for="{{list}}">
-        <view class="movie">
-          <view class="left">
-            <image class="left" src="{{item.img}}"></image>
-          </view>
-          <view class="center">
-            <text class="title"> 名称 : {{item.title}}</text>
-            <text class="detail">观看人数:{{item.watch_count}}</text>
-            <text class="detail">评分:{{item.score}}.8</text>
-            <text class="detail">上映时间:</text>
-            <text class="detail">{{item.show_time}}</text>
-          </view>
-          <view class="right">
-            <text style="font-size:18px;color:red;padding-top:10rpx">购票</text>
-          </view>
-        </view>
-      </block>
+
+  <view class="movie">
+      <view class="left debug">
+        <image src="http://img02.tooopen.com/images/20150928/tooopen_sy_143912755726.jpg" class="img"></image>
+      </view>
+      <view class="center debug">
+      
+      <view class="first">
+      <text class="title">海贼王</text>
+      <icon type="waiting_circle" size="25" color="red"/>
+      
+      </view>
+      <text class="detail">¥:9.8元</text>
+      <text class="detail">创建时间:</text>
+      <text class="detail">2017-01-01 12:21:59</text>
+
+      </view>
+      <view class="right debug">
+        <button type="default" size="mini">已评</button>
+      </view>
     </view>
-  </scroll-view>
-  <loading hidden="{{hidden}}">
-    拼命加载中...
-  </loading>
+
+
+
+  </view>
 </view>

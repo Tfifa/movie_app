@@ -1,52 +1,55 @@
-/**轮播图**/
-.slide-image{
-  width: 100%;
-  height: 150px;
-}
 
-/**列表**/
 .movie_list{
+
 width: 100%;
 height: 100vh;
+
 }
-/**电影对象 横向布局**/
+
 .movie{
   width: 100%;
-  height: 250rpx;
+  height: 200rpx;
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
- align-items: center;
- border: 1px solid #FAFAD2;
+  border-bottom: 1px solid #FAFAD2;
+
 }
+
 .left{
-  width: 300rpx;
-  height: 220rpx;
-  border-radius: 5px;
-  box-shadow: 2px 2px 2px #888888;
+display: flex;
+justify-content: center;
+align-items: center;
+width: 30%;
+
 }
-/**纵向布局**/
+
 .center{
+
 flex: 1;
 display: flex;
 flex-direction: column;
 justify-content: space-around;
 flex-wrap: nowrap;
 font-size: 14px;
-padding: 10rpx;
 }
-.right{
-  height: 100%;
-  width: 100rpx;
+
+.center .first{
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   justify-content: space-between;
 }
-/**描述**/
-.detail{
-  font-size:14px;color:gray
+
+.right{
+width: 20%;
+display: flex;
+flex-direction: column;
+justify-content:flex-start;
+padding: 5rpx;
 }
-/**标题**/
-.title{
-  font-size:16px;color:#052b51
+
+.img{
+  width: 180rpx;
+  height: 180rpx;
+  border-radius: 10rpx;
 }

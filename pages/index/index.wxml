@@ -41,6 +41,8 @@
     
     <view class="movie_list">
       <block wx:for="{{list}}">
+       <navigator url="../detail/detail?id={{item.movie_id}}&title={{item.title}}"  >
+
         <view class="movie">
           <view class="left">
             <image class="left" src="{{item.img}}"></image>
@@ -56,6 +58,7 @@
             <text style="font-size:18px;color:red;padding-top:10rpx">购票</text>
           </view>
         </view>
+         </navigator>
       </block>
     </view>
   </scroll-view>
