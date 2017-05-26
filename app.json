@@ -1,10 +1,12 @@
 {
   "pages": [
 
+    "pages/index/index",
     "pages/comment/comment",
 
-    "pages/index/index",
+    
 
+    "pages/cinema/cinema",
 
 
 

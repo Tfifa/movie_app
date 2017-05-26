@@ -1,32 +1,127 @@
-.movie{
-width: 100%;
-height: 30vh;
-display: flex;
-flex-direction: row;
-}
-.left{
-    width: 300rpx;
-    height: 30vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+/**电影信息**/
+
+.movie {
+  width: 100%;
+  height: 30vh;
+  display: flex;
+  flex-direction: row;
+
+    border-bottom: #e0e0e0 1px solid;
 
 }
-.right{
-    display: flex;
-    flex: 1;
+
+/**电影信息  左边电影图片**/
+
+.left {
+  width: 35%;
+  height: 30vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
-.img{
-  width: 250rpx;
-  height: 25vh;
+
+/**图片**/
+
+.img {
+  width: 100%;
+  height: 27vh;
   border-radius: 10rpx;
 }
-
-.list{
-width: 100%;
-height: 100vh;
+/**固定文字**/
+lable {
+  color: gray;
 }
-.comment{
-width: 100%;
-height: 20vh;
+
+/**电影信息  右边电影信息**/
+
+.right {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  width: 60%;
+}
+/**标题和观看人数信息**/
+.movie_basic{
+  
+
+}
+
+/**购买按钮**/
+.buy_button{
+  
+}
+
+/**标题和观看人数信息大模块*/
+
+.title {
+  color: black;
+  height: 15vh;
+    display: flex;
+    flex-direction: row;
+      justify-content: space-around;
+
+
+}
+
+/**演员列表**/
+
+.actor {
+  color: black;
+  display: flex;
+  height: 15vh;
+  align-items: center;
+  justify-content: space-around;
+}
+/**评论列表**/
+.list {
+  width: 100%;
+
+}
+
+
+
+
+
+/**每条评论内容**/
+.comment {
+  width: 100%;
+  height: 18vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+    border-bottom: #e0e0e0 1px solid;
+
+}
+
+/**评论里面用户信息**/
+.userinfo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.userinfo-avatar {
+  width: 128rpx;
+  height: 128rpx;
+  margin: 20rpx;
+  border-radius: 50%;
+}
+.userinfo-nickname {
+  color: #aaa;
+}
+
+
+/**评论内容盒子**/
+.comment-content{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+/**评论内容部分**/
+.comment-up{}
+
+/**评论时间**/
+.comment-down{
+  color: gray;
+  font-size: 14px;
+
 }

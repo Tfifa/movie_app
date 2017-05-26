@@ -1,0 +1,43 @@
+/**影院列表**/
+
+.cinema_list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+/**影院选项**/
+
+.cinema {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 18vh;
+  border-bottom: #e0e0e0 1px solid;
+}
+
+/**地点**/
+
+.address {
+}
+
+/**电影院名称**/
+
+.name {
+}
+
+/**固定文字**/
+
+lable {
+  color: gray;
+}
+
+/**场次和支付按钮选择器**/
+
+.btn {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}

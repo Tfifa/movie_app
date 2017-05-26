@@ -1,0 +1,39 @@
+<view class="page">
+  
+  <view class="cinema_list ">
+
+	<block wx:for="{{cinema_list}}">
+  		 <view class="cinema ">
+		  		
+		  		<view class="address">
+					<lable>地点:</lable>{{item.address}}
+		  		</view>   
+		  		
+		  		<view class="name">
+		  		<lable>名称:</lable>{{item.name}}
+		  		</view>
+
+		  		<view class="btn">	
+		  			<!---播放时间-->
+		  			<view >
+				           <lable>时间:</lable>{{item.play_time}}
+    	   			 </view>
+    	   			 <!--支付确认-->	
+
+    	   			  <view >
+			            <button class="weui-btn" formType="submit" type="primary" size="mini">支付</button>
+			        </view>
+			    </view>    
+
+  		 </view>
+	</block>
+  		 	 
+  		 
+
+
+  		 
+
+
+  </view>
+
+</view>

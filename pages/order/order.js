@@ -6,82 +6,43 @@ var app = getApp()
 Page({
 
   data: {
-    list: [],
-    hidden: false,
-    imgUrls: [],
-    page: 0,
-    size: 5,
-    indicatorDots: true,
-    autoplay: true,
-    interval: 2000,
-    duration: 1000
+    list: []
   },
   //页面加载的时候自动调用
   onLoad: function () {
     console.log('onLoad')
-    this.getMovieList();
+    this.getOrderList();
   },
 
   //网络请求数据
-  getMovieList: function () {
-
+  getOrderList: function () {
+        let param = {};
+        //获取登录的token
+        param.token = wx.getStorageSync('token') || "";
+        console.info(param);
     var that = this
     //调用方法获取电影列表
     wx.request({
-      url: app.globalData.backend_url + '/movie/page',
-      data: {
-        page: that.data.page + 1,
-        size: that.data.size
-      },
+      url: app.globalData.backend_url + '/order/list',
+      data: param,
       success: function (res) {
         let resp = res.data.data;
-        //获取响应结果
-        var result = res.data.data.data;
-        //声明电影数组列表
-        var movie_list = [];
-        var imgs = [];
-
-        if (resp.currentPage >= resp.totalPages) {
-          console.info("无更多电影了");
-          return;
-        }
-
-        //合并之前的数据
-        Array.prototype.push.apply(movie_list, that.data.list)
-        for (var i = 0; i < result.length; i++) {
-          imgs.push(result[i].img);
-
-          //获取页面需要看到电影对象
-          movie_list.push({
-            movie_id: result[i].id, img: result[i].img,
-            title: result[i].title, summary: result[i].summary,
-            show_time: util.formatTime(new Date(result[i].show_time)),
-            score: result[i].score,
-            watch_count: result[i].watch_count
-          })
-        }
-
-        //把处理的数据仓库
+       
+        console.info(resp)
         that.setData({
-          list: movie_list,
-          hidden: true,
-          imgUrls: imgs,
-          page: res.data.data.currentPage
-        })
+                   list:resp.pageData
+                });
 
       }
     })
   },
-
-  //加载更多
-  load: function (e) {
-    this.getMovieList();
-    console.log("loadMore");
-
-  },
-  //刷新处理
-  refesh: function (e) {
-    console.log("refesh");
+  //跳转到评论界面
+  toComment:function(e){
+    console.info("订单编号:"+e.target.id)
+    wx.navigateTo({
+        url: '../comment/comment?order_id='+e.target.id
+      })
   }
 
+  
 })

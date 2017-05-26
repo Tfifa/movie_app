@@ -1,28 +1,69 @@
 
 <!--index.wxml-->
 <view class="page">
+  <view class="movie ">
+    <view class="left ">
+      <image src="{{movie_detail.img}}" class="img"></image>
+    </view>
+    <view class="right ">
 
-  <view class="movie debug">
-        <view class="left debug">
-        <image src="http://img02.tooopen.com/images/20150928/tooopen_sy_143912755726.jpg" class="img"></image>
+
+       <view class="title ">
+                <!-- 基本信息-->
+               <view class="movie_basic">
+                     <view > 
+                      <view > <lable>电影名：</lable>{{movie_detail.title}} </view>
+                     </view>
+
+                      <view > 
+                      <lable>观看人数：</lable>{{movie_detail.watch_count}}人
+                      </view>
+                      
+                      <view > 
+                      <lable>评分：</lable>{{movie_detail.score}}分
+                      </view>
+              </view>
+
+              <!-- 购买按钮-->
+              <view class="buy_button">
+
+                <navigator url="../cinema/cinema?id={{movie_detail.id}}" class="weui-cell"hover-class="weui-cell_active">
+                  <button type="primary" size="mini">购买</button>
+               </navigator>
+              
+              </view>
+        
         </view>
-        <view class="right debug">
-        content
-        </view>
+
+
+      <view class="actor ">
+        <lable>主演：</lable>{{actor_names}}
+      </view>
+
+
+
+    </view>
+
+
   </view>
+  <view class="list ">
 
 
-  <view class="list debug">
-    <view class="comment debug">
-      xxx
+<block wx:for="{{comment_list}}">
+    <view class="comment ">
+      <!--用户信息-->
+     <view class="userinfo">
+          <image class="userinfo-avatar" src="{{item.head_img}}" background-size="cover"></image>
+          <text class="userinfo-nickname">{{item.nickname}}</text>
+      </view>
+
+    <!--评论详情，时间-->
+    <view class="comment-content">
+     <view class="comment-up">{{item.content}}</view> 
+     <view class="comment-down">{{item.create_time}}</view>
     </view>
-    <view class="comment debug">
-      xxx
+
     </view>
-    <view class="comment debug">
-      xxx
-    </view>
+</block>
   </view>
-
-
 </view>
